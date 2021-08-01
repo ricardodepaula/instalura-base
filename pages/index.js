@@ -1,4 +1,3 @@
-import styled from 'styled-components'
 import Menu from '../src/components/commons/Menu'
 
 export default function Home() {
