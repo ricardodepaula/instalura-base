@@ -45,10 +45,10 @@ MenuWrapper.CentralSide = styled.div`
 `;
 
 MenuWrapper.RightSide = styled.div`
-    padding: 0;
-    margin: 0;
-    display: flex;
-    flex: 1;
-    order: 2;
-    justify-content: flex-end;
+	padding: 0;
+	margin: 0;
+	display: flex;
+	flex: 1;
+	order: 2;
+	justify-content: flex-end;
 `;
