@@ -1,11 +1,11 @@
 import styled from 'styled-components'
 
 export const MenuWrapper = styled.nav`
-    fotn-family: 'Rubik', sans-serif;
+    font-family: 'Rubik', sans-serif;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    felx-wrap: wrap;
+    flex-wrap: wrap;
     margin-top: 18px;
     padding-left: 28px;
     padding-right: 28px;
