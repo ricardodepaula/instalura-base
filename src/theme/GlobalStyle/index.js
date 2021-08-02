@@ -12,6 +12,7 @@ const GlobalStyle = createGlobalStyle`
     padding: 0;
     font-family: ${({ theme }) => theme.fontFamily};
   }
+  
   /* Full height layout */
   html, body {
     display: flex;
