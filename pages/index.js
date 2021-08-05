@@ -4,7 +4,7 @@ import Footer from '../src/components/commons/Footer';
 import { Text } from '../src/components/foundation/Text';
 import { Button } from '../src/components/commons/Button';
 import { Grid } from '../src/components/layout/Grid';
-import { Box } from '../src/components/layout/Box'
+import { Box } from '../src/components/layout/Box';
 
 export default function Home() {
   return (
@@ -18,7 +18,7 @@ export default function Home() {
       backgroundRepeat="no-repeat"
       backgroundPosition="bottom right"
     >
-      <Menu/>
+      <Menu />
 
       <Grid.Container
         marginTop={{
@@ -26,7 +26,7 @@ export default function Home() {
           md: '75px',
         }}
       >
-        
+
         <Grid.Row>
           <Grid.Col
             value={{ xs: 12, md: 5 }}
@@ -57,8 +57,8 @@ export default function Home() {
                   md: 'left',
                 }}
               >
-                Crie uma conta ou faça login no Instalura - Uma maneira simples, divertida e criativa de 
-                compartilhar conteudo com amigos e família.
+                Crie uma conta ou faça login no Instalura - Uma maneira simples, divertida
+                e criativa de compartilhar conteudo com amigos e família.
                 Uma ferramenta criada no Bootcamp de front-end avançado Alura 2021.
               </Text>
               <Button
@@ -72,18 +72,19 @@ export default function Home() {
                 Cadastrar
               </Button>
             </div>
-            </Grid.Col>
+          </Grid.Col>
           <Grid.Col
             value={{ xs: 12, md: 6 }}
           >
             <img
+              alt="Imagem de celular com páginas internas do projeto com o perfil do Cage"
               style={{ display: 'block', margin: 'auto' }}
               src="https://bootcamp-alura-01-git-modulo01.omariosouto.vercel.app/images/phones.png"
             />
           </Grid.Col>
         </Grid.Row>
       </Grid.Container>
-      <Footer/>
+      <Footer />
     </Box>
-  )
+  );
 }
