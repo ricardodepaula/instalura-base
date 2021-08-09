@@ -5,8 +5,13 @@ import { Text } from '../src/components/foundation/Text';
 import { Button } from '../src/components/commons/Button';
 import { Grid } from '../src/components/layout/Grid';
 import { Box } from '../src/components/layout/Box';
+import Modal from '../src/components/commons/Modal';
 
 export default function Home() {
+  const [isModalOpen, setModalState] = React.useState(false);
+
+  console.log('Retorno hook', isModalOpen);
+
   return (
     <Box
       flex="1"
@@ -18,6 +23,30 @@ export default function Home() {
       backgroundRepeat="no-repeat"
       backgroundPosition="bottom right"
     >
+      {/*
+        SOLID
+        S = Single Responsability
+      */}
+
+      <Modal
+        isOpen={isModalOpen}
+        onClose={() => {
+          setModalState(false);
+        }}
+      >
+        {(propsDoModal) => (
+          <Box
+            backgroundColor="white"
+            // eslint-disable-next-line react/jsx-props-no-spreading
+            {...propsDoModal}
+          >
+            <div>
+              Nosso conteudo para o modal
+            </div>
+          </Box>
+        )}
+      </Modal>
+
       <Menu />
 
       <Grid.Container
@@ -26,7 +55,6 @@ export default function Home() {
           md: '75px',
         }}
       >
-
         <Grid.Row>
           <Grid.Col
             value={{ xs: 12, md: 5 }}
@@ -62,12 +90,17 @@ export default function Home() {
                 Uma ferramenta criada no Bootcamp de front-end avançado Alura 2021.
               </Text>
               <Button
-                variant="primary.main"
                 margin={{
                   xs: 'auto',
                   md: 'initial',
                 }}
                 display="block"
+                variant="primary.main"
+                onClick={() => {
+                  // isModalOpen = true;
+                  console.log('isModalOpen', isModalOpen);
+                  setModalState(!isModalOpen); // novo state sendo atribuido
+                }}
               >
                 Cadastrar
               </Button>
