@@ -1,14 +1,14 @@
 import React from 'react';
-import Button from '../../commons/Button';
+import { Button } from '../../commons/Button';
 import TextField from '../../forms/TextField';
-import Box from '../../foundation/layout/Box';
-import Grid from '../../foundation/layout/Grid';
-import Text from '../../foundation/Text';
+import { Box } from '../../foundation/layout/Box';
+import { Grid } from '../../foundation/layout/Grid';
+import { Text } from '../../foundation/Text';
 
 function FormContent() {
   const [userInfo, setUserInfo] = React.useState({
-    usuario: 'omariosouto',
-    email: 'devsoutinho@gmail.com',
+    usuario: '',
+    email: '',
   });
 
   function handleChange(event) {
