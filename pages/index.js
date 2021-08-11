@@ -11,8 +11,6 @@ import FormCadastro from '../src/components/patterns/FormCadastro';
 export default function Home() {
   const [isModalOpen, setModalState] = React.useState(false);
 
-  console.log('Retorno hook', isModalOpen);
-
   return (
     <Box
       flex="1"
@@ -91,7 +89,6 @@ export default function Home() {
                 variant="primary.main"
                 onClick={() => {
                   // isModalOpen = true;
-                  console.log('isModalOpen', isModalOpen);
                   setModalState(!isModalOpen); // novo state sendo atribuido
                 }}
               >
