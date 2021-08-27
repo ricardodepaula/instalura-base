@@ -38,7 +38,9 @@ export default function Home() {
         )}
       </Modal>
 
-      <Menu />
+      <Menu
+        onCadastrarClick={() => setModalState(true)}
+      />
 
       <Grid.Container
         marginTop={{
@@ -56,7 +58,7 @@ export default function Home() {
             flexDirection="column"
           >
             <div>
-              <Text
+               <Text
                 variant="title"
                 tag="h1"
                 color="tertiary.main"
